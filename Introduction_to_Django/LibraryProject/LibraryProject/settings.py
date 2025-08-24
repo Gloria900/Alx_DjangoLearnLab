@@ -20,7 +20,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-f^7hb#ai2bh3@$^*67n3va_0ubknylun1-%kc&5bqmipa4d0$_'
+SECRET_KEY = 'django-insecure-+1&fl!(-@h3x*+(yw(@(pi%!i9abwoe_88!89egh4@qw^rpj5m'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -37,8 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'bookshelf.apps.BookshelfConfig'
-    
+    'bookshelf',
 ]
 
 MIDDLEWARE = [
@@ -77,7 +76,11 @@ WSGI_APPLICATION = 'LibraryProject.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'NAME': 'mybookshelfdb',
+        'USER': 'GiftinTech',
+        'PASSWORD':'1111111111',
+        'HOST': 'localhost',
+        'PORT': '3306',
     }
 }
 
