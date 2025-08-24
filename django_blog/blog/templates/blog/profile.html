@@ -1,0 +1,11 @@
+{% extends "base.html" %} {% block title %}Profile · GiftinTech Django Blog{%
+endblock %} {% block content %}
+<h2>Your Profile</h2>
+<form method="post">
+  {% csrf_token %}
+  <p>Username: {{ user.username }}</p>
+  <label>Email:</label>
+  <input type="email" name="email" value="{{ user.email }}" />
+  <button type="submit">Update</button>
+</form>
+{% endblock %}

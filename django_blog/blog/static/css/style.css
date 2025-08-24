@@ -1,0 +1,63 @@
+/* Base styles for auth pages and layout */
+:root {
+  --gap: 1rem;
+  --edge: 24px;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue",
+    Arial, sans-serif;
+  background: #fafafa;
+  color: #222;
+}
+.container {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 0 var(--edge);
+}
+.site-header {
+  background: #fff;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 2rem;
+}
+nav a {
+  margin-right: var(--gap);
+  text-decoration: none;
+  color: #0b57d0;
+}
+h1,
+h2 {
+  margin: 0 0 1rem;
+}
+form {
+  display: grid;
+  gap: 0.75rem;
+  background: #fff;
+  padding: 1.25rem;
+  border: 1px solid #eee;
+  border-radius: 12px;
+}
+input,
+button {
+  padding: 0.6rem 0.75rem;
+  font: inherit;
+}
+button {
+  background: #0b57d0;
+  color: #fff;
+  border: 0;
+  border-radius: 8px;
+  cursor: pointer;
+}
+button:hover {
+  filter: brightness(0.95);
+}
+.alert {
+  padding: 0.75rem;
+  border-radius: 8px;
+  background: #eef5ff;
+  border: 1px solid #d9e7ff;
+}

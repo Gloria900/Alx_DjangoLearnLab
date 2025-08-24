@@ -1,0 +1,11 @@
+{% extends "base.html" %} {% block title %}Register · GiftinTech Django Blog{%
+endblock %} {% block content %}
+<h2>Register</h2>
+<!-- Registration form -->
+<!-- CSRF token is required for security -->
+<form method="post">
+  {% csrf_token %} {{ form.as_p }}
+  <!-- Render form fields -->
+  <button type="submit">Register</button>
+</form>
+{% endblock %}

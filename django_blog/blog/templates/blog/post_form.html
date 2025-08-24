@@ -1,0 +1,15 @@
+{% extends "base.html" %} {% block title %}{% if object %}Edit: {{ object.title
+}}{% else %}New Post{% endif %}{% endblock %} {% block content %}
+<h2>{% if object %}Edit Post{% else %}Create Post{% endif %}</h2>
+
+<form method="post">
+  {% csrf_token %} {{ form.as_p }}
+  <button type="submit">
+    {% if object %}Update{% else %}Create{% endif %}
+  </button>
+  <a
+    href="{% if object %}{{ object.get_absolute_url }}{% else %}{% url 'post-list' %}{% endif %}"
+    >Cancel</a
+  >
+</form>
+{% endblock %}
